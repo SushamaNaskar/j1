@@ -1,0 +1,88 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+<style type="text/css">
+#circle{
+width:150px;
+height:40px;
+background-color:red;
+border-radius:50%;
+}
+#greencircle{
+width:150px;
+height:40px;
+background-color:green;
+border-radius:50%;
+margin:10px;
+}
+.square{
+width:150px;
+height:40px;
+background-color:green;
+margin:10px;
+
+}
+.square{
+width:150px;
+height:40px;
+background-color:green;
+
+}
+.color{
+width:150px;
+height:40px;
+background-color:black;
+
+}
+</style>
+</head>
+<body>
+hi there!
+
+<h1>selector</h1>
+<div id="circle"></div>
+<iframe src="jQuery1.html"></iframe>
+<h1>This</h1>
+<div id="greencircle"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="color">css proprty change</div>
+
+
+<script type="text/javascript">
+if (typeof jQuery=="undefined") {
+alert("jQuery is not installed!");
+} else{
+alert("jQuery is installed correctly");
+}
+
+
+
+<!--circle-->
+$("#circle").click(function(){
+$("iframe").attr("src","images/selector.png");
+});
+
+
+
+<!--This-->
+$("div").click(function() {
+if($(this).attr("id")=="greencircle") {
+alert("a green circle");
+}else{
+
+alert("a green square");
+}
+});
+
+
+
+<!--css proprty change-->
+$(".color").click(function() {
+$(".color").css("background-color","yellow");
+});
+ 
+</script>
+</body>
+</html>
